@@ -1,0 +1,13 @@
+<h3>Listado de Cartas</h3>
+<div *ngIf="deletedCard; else nadaBorrado">
+  <h3>Carta borrada: <small class="text-danger">{{this.deletedCard}}</small></h3>
+</div>
+
+<ng-template #nadaBorrado>
+  <h3>No ha Borrado nada</h3>
+</ng-template>
+
+<ul class="mt-2 list-group">
+  <li *ngFor="let card of cartas">{{card}}</li>
+</ul>
+<button *ngIf="cartas.length > 0" class="btn btn-outline-danger" (click)="removeLastItem()">Borrar último registro</button>

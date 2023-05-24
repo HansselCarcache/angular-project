@@ -1,0 +1,14 @@
+<h1>{{name}}</h1>
+<dl>
+  <td>Nombre:</td>
+  <dd>{{name}}</dd>
+
+  <td>Edad:</td>
+  <dd>{{age}}</dd>
+
+  <td>Nombre en Mayúsculas</td>
+  <dd> {{getName}}</dd>
+</dl>
+
+<button class="btn btn-primary mx-2" (click)="cambiarNombre()" *ngIf="name === 'Kurt Cobain'" >Cambiar Nombre</button>
+<button class="btn btn-primary" (click)="cambiarEdad()" *ngIf="age === 29">Cambiar edad</button>

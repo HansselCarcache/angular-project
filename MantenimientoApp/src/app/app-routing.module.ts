@@ -19,8 +19,8 @@ const routes: Routes= [
     component: ContactPageComponent
   },
   {
-    path:'countries',
-    loadChildren: () => import('./countries/countries.module').then(m => m.CountriesModule)
+    path:'pais',
+    loadChildren: () => import('./Pais/pais.module').then(m => m.PaisModule)
   },
   {
     path:'muestra',
@@ -30,7 +30,7 @@ const routes: Routes= [
     path:'**',
     redirectTo: 'countries'
   }
- 
+
 ]
 
 @NgModule({

@@ -6,10 +6,12 @@ import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MuestraComponent } from './muestra/muestra.component';
+import { PaisTableComponent } from './Pais/components/pais-table/pais-table.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PaisTableComponent
   ],
   imports: [
     BrowserModule,

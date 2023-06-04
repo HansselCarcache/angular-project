@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './shared/pages/home-page/home-page.component';
 import { AboutPageComponent } from './shared/pages/about-page/about-page.component';
 import { ContactPageComponent } from './shared/pages/contact-page/contact-page.component';
+import { MuestraComponent } from './muestra/muestra.component';
 
 const routes: Routes= [
   // {
@@ -22,9 +23,14 @@ const routes: Routes= [
     loadChildren: () => import('./countries/countries.module').then(m => m.CountriesModule)
   },
   {
+    path:'muestra',
+    loadChildren: () => import('./muestra/muestra.module').then(m => m.MuestraModule)
+  },
+  {
     path:'**',
     redirectTo: 'countries'
   }
+ 
 ]
 
 @NgModule({

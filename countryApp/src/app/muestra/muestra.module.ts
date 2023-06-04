@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core";
 import { MuestraRoutingModule } from "./muestra-routing.module";
 import { SharedModule } from "../shared/shared.module";
 import { MuestraComponent } from "./muestra.component";
+import { MuestraTableComponent } from "./table/muestra-table.component";
 
 @NgModule({
     imports:[
@@ -12,7 +13,8 @@ import { MuestraComponent } from "./muestra.component";
     ],
     exports:[],
     declarations:[
-        MuestraComponent
+        MuestraComponent,
+        MuestraTableComponent
     ],
     providers: [],
 })

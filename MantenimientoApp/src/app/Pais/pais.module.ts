@@ -6,11 +6,7 @@ import {PorPaisPaginaComponent } from './Pages/por-pais-pagina.component';
 import {PaisRoutingModule } from './pais-routing.module';
 import { PaisTableComponent } from './components/pais-table/pais-table.component';
 
-
-
-
-
-NgModule({
+@NgModule({
   imports: [
     FormsModule,
     CommonModule,

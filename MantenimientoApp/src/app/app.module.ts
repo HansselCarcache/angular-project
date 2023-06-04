@@ -10,8 +10,7 @@ import { PaisTableComponent } from './Pais/components/pais-table/pais-table.comp
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PaisTableComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

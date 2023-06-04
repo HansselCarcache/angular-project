@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Muestra } from './interface/muestra';
 
 @Component({
   selector: 'app-muestra',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./muestra.component.css']
 })
 export class MuestraComponent {
-
+  public muestras: Muestra[] = [];
 }

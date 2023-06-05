@@ -1,34 +1,33 @@
-import { Component } from '@angular/core';
-import { Pais } from '../interface/pais';
-import { PaisService } from '../services/pais.service';
+
+import { Component, Input } from '@angular/core';
+import { Pais } from '../../Pais/interface/pais';
+import { PaisService } from '../../Pais/services/pais.service';
+
+
+type Funciones = 'Buscar'|'Guardar'
 
 @Component({
-  selector: 'Pais-por-pais-pagina',
+  selector: 'pais-por-pais-pagina',
   templateUrl: './por-pais-pagina.component.html',
-  styles: [
-  ]
+  styles: []
 })
 export class PorPaisPaginaComponent {
-  public Pais: Pais[] = [];
+
+  public paises: Pais[] = [];
+  public funciones: Funciones[] = ['Buscar', 'Guardar'];
+  public selectedFuncion?: Funciones;
   constructor(private paisService: PaisService){}
-
-  public  ListadoPais(): void {
-    let IdPais: number | undefined = undefined;
-
-
-
-    // if (IdPais !== undefined) {
-    //   this.paisService. ListadoPais( IdPais).subscribe(
-    //     paises => {
-    //       this.paises = paises;
-    //       console.log(this.paises);
-    //     },
-    //     error => {
-    //       console.error(error);
-    //     }
-    //   );
-    // }
+  ngOnInit(){
+    let term = ''
+    this.paisService.searchPais(term)
+    .subscribe(paises =>{
+      this.paises = paises
+    });
+    console.log('term');
+  }
+  searchPais(funcion:Funciones):void{
+    this.selectedFuncion = funcion;
+    console.log(funcion);
   }
 
 }
-

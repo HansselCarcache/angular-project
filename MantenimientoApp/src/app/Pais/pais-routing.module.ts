@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {PorPaisPaginaComponent } from './Pages/por-pais-pagina.component';
+import { PorPaisPaginaComponent } from "./Pages/por-pais-pagina.component"
 
 const routes: Routes=[
 

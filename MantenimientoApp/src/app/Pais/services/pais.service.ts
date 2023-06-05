@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Pais } from '../interface/pais';
-import { Observable, catchError, map, of, pipe } from "rxjs";
+import { Observable, catchError, forkJoin, map, of, pipe } from "rxjs";
 
 
 @Injectable({
@@ -9,7 +9,7 @@ import { Observable, catchError, map, of, pipe } from "rxjs";
 })
 export class PaisService {
 
-  private apiUrlPais:string = 'http://localhost:8080';
+  private apiUrlPais:string = 'http://localhost:8088';
 
   constructor(private http: HttpClient) { }
 
@@ -24,4 +24,17 @@ export class PaisService {
       const url = `${this.apiUrlPais}/api/pais`;
       return this.getPaisRequest(url);
   }
+
+  // getPaisesById(idPais: number[]): Observable<(Pais | null)[]> {
+  //   const url = `${this.apiUrlPais}/api/pais`;
+  //   const requests: Observable<Pais | null>[] = [];
+
+  //   idPais.forEach(id => {
+  //     const request = this.http.get<Pais>(url.replace('{id}', id.toString())).pipe(        catchError(() => of(null))
+  //     );
+  //     requests.push(request);
+  //   });
+
+  //   return forkJoin(requests);
+  // }
 }

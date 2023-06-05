@@ -4,7 +4,7 @@ import { Pais } from '../../Pais/interface/pais';
 import { PaisService } from '../../Pais/services/pais.service';
 
 
-type Funciones = 'Buscar'|'Guardar'
+type Funciones = 'Buscar'|'Guardar'|'Listar'
 
 @Component({
   selector: 'pais-por-pais-pagina',
@@ -14,8 +14,10 @@ type Funciones = 'Buscar'|'Guardar'
 export class PorPaisPaginaComponent {
 
   public paises: Pais[] = [];
-  public funciones: Funciones[] = ['Buscar', 'Guardar'];
+  public funciones: Funciones[] = ['Buscar', 'Guardar', 'Listar'];
   public selectedFuncion?: Funciones;
+  public selectedPais?: Pais;
+
   constructor(private paisService: PaisService){}
   ngOnInit(){
     let term = ''
@@ -25,9 +27,9 @@ export class PorPaisPaginaComponent {
     });
     console.log('term');
   }
-  searchPais(funcion:Funciones):void{
+
+  searchPais(funcion: Funciones): void {
     this.selectedFuncion = funcion;
     console.log(funcion);
   }
-
 }

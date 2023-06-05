@@ -4,17 +4,21 @@ import { MuestraRoutingModule } from "./muestra-routing.module";
 import { SharedModule } from "../shared/shared.module";
 import { MuestraComponent } from "./muestra.component";
 import { MuestraTableComponent } from "./table/muestra-table.component";
+import { MuestraFormComponent } from "./forms/muestra-forms.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
     imports:[
         CommonModule,
         MuestraRoutingModule,
-        SharedModule
+        SharedModule,
+        FormsModule      
     ],
     exports:[],
     declarations:[
         MuestraComponent,
-        MuestraTableComponent
+        MuestraTableComponent,
+        MuestraFormComponent
     ],
     providers: [],
 })

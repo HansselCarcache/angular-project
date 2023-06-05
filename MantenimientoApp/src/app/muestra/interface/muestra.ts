@@ -1,5 +1,5 @@
 export interface Muestra {
-    idTipoMuestra: number;
-    descripcion: string;
-    estado: number;
+    idTipoMuestra?: number;
+    descripcion?: string;
+    estado?: number;
 }

@@ -31,6 +31,10 @@ const routes: Routes= [
     loadChildren: () => import('./Departamento/departamento.module').then(m => m.DepartamentoModule)
    },
   {
+    path: 'paciente',
+    loadChildren: () => import('./paciente/paciente.module').then(m => m.PacienteModule)
+  },
+  {
     path:'**',
     redirectTo: 'countries'
   }

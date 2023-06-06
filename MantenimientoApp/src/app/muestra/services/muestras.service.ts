@@ -49,7 +49,6 @@ export class MuestrasService {
     }
 
     deleteMuestra(id:number): Observable<any>{
-        const headers = { 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'POST, PUT, PATCH, GET, DELETE, OPTIONS', 'Access-Control-Allow-Headers': '*'}  
         const url = `${this.apiUrl}/api/muestras/deleteById/${id}`;
         return this.http.delete(url)
         

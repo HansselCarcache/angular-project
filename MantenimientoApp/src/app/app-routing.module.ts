@@ -26,6 +26,10 @@ const routes: Routes= [
     path:'muestra',
     loadChildren: () => import('./muestra/muestra.module').then(m => m.MuestraModule)
   },
+     {
+    path: 'departamento',
+    loadChildren: () => import('./Departamento/departamento.module').then(m => m.DepartamentoModule)
+   },
   {
     path:'**',
     redirectTo: 'countries'

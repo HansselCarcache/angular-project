@@ -9,7 +9,7 @@ import { Observable, catchError, forkJoin, map, of, pipe } from "rxjs";
 })
 export class PaisService {
 
-  private apiUrlPais:string = 'http://localhost:8088';
+  private apiUrlPais:string = 'http://localhost:8086';
 
   constructor(private http: HttpClient) { }
 

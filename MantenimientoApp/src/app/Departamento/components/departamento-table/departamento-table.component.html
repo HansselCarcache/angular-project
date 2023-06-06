@@ -6,6 +6,7 @@
   <table class="table table-hover">
     <thead>
       <tr>
+        <th>#</th>
         <th>ID</th>
         <th> ID Pais</th>
         <th> Descripcion</th>
@@ -14,8 +15,9 @@
     <tbody>
       <tr *ngFor="let departamentos of departamentos; let i = index">
         <td>{{ i + 1 }}</td>
-        <!-- <td>{{ pais.IdPais }}</td> -->
-        <td>{{ departamentos.descripcion }}</td>
+         <td>{{ departamentos.IdDepartamento }}</td> 
+        <td>{{ departamentos.IdPais }}</td>
+        <td>{{ departamentos.Descripcion }}</td>
       </tr>
     </tbody>
   </table>

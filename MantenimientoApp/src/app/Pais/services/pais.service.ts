@@ -20,21 +20,40 @@ export class PaisService {
           );
   }
 
+  searchPaisById(term:string): Observable<Pais| null>{
+    const url = `${this.apiUrlPais}/api/pais/paisById/${term}`;
+    return this.http.get<Pais>(url)
+    .pipe(
+
+        catchError( () => of(null))
+    );
+}
+
   searchPais(term: string): Observable<Pais[]>{
       const url = `${this.apiUrlPais}/api/pais`;
       return this.getPaisRequest(url);
   }
 
-  // getPaisesById(idPais: number[]): Observable<(Pais | null)[]> {
-  //   const url = `${this.apiUrlPais}/api/pais`;
-  //   const requests: Observable<Pais | null>[] = [];
+  addPais(pais:Pais): Observable<any> {
+    const url = `${this.apiUrlPais}/api/pais/add`;
+    const headers = { 'content-type': 'application/json'}
+    const body=JSON.stringify(pais);
+    console.log(body)
+    return this.http.post(url, body,{'headers':headers})
+}
 
-  //   idPais.forEach(id => {
-  //     const request = this.http.get<Pais>(url.replace('{id}', id.toString())).pipe(        catchError(() => of(null))
-  //     );
-  //     requests.push(request);
-  //   });
+updatePais(pais: Pais): Observable<any>{
+    const url = `${this.apiUrlPais}/api/pais/updateById/${pais.IdPais}`;
+    const headers = { 'content-type': 'application/json'}
+    const body=JSON.stringify(pais);
+    console.log(body)
+    return this.http.put(url, body,{'headers':headers})
+}
 
-  //   return forkJoin(requests);
-  // }
+deletePais(id:number): Observable<any>{
+    const headers = { 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Methods': 'POST, PUT, PATCH, GET, DELETE, OPTIONS', 'Access-Control-Allow-Headers': '*'}
+    const url = `${this.apiUrlPais}/api/pais/deletePaisById/${id}`;
+    return this.http.delete(url)
+
+}
 }

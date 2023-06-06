@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, EventEmitter, Input, Output } from '@angular/core'
 import { Pais } from '../../interface/pais'
 
 @Component({
@@ -10,4 +10,16 @@ import { Pais } from '../../interface/pais'
 export class PaisTableComponent {
     @Input()
     public paises: Pais[] = [];
+    @Output() updateEvent = new EventEmitter<any>();
+    @Output() deleteEvent  = new EventEmitter<any>();
+
+
+    update(p:Pais){
+      this.updateEvent.emit(p);
+  }
+
+  delete(p:Pais){
+      this.deleteEvent.emit(p);
+
+  }
 }

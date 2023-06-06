@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import {PorPaisPaginaComponent } from './Pages/por-pais-pagina.component';
 import { PaisRoutingModule } from './pais-routing.module';
 import { PaisTableComponent } from './components/pais-table/pais-table.component';
+import { PaisFormComponent } from './forms/pais-forms/pais-forms.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,9 @@ import { PaisTableComponent } from './components/pais-table/pais-table.component
   exports: [],
   declarations: [
    PorPaisPaginaComponent,
-   PaisTableComponent
+   PaisTableComponent,
+   PaisFormComponent,
+
 
   ],
   providers: [],

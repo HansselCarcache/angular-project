@@ -8,16 +8,9 @@
           <tr>
             <th>#</th>
             <th>ID</th>
-            <th>Área Lab Servicio</th>
-            <th>Metodología</th>
-            <th>Categoría del examen</th>
-            <th>Tipo de muestra</th>
-            <th>Unidad de medida</th>
-            <th>Tipo de resultado</th>
             <th>Descripción</th>
             <th>Descripción corta</th>
             <th>lisCode</th>
-            <th>Conteo</th>
             <th>Confidencial</th>
             <th>Calculado</th>
             <th>Estado</th>
@@ -27,16 +20,9 @@
           <tr *ngFor="let examenes of examenes; let i = index">
             <td>{{ i +1}}</td>
             <td>{{examenes.idExamen}}</td>
-            <td>{{examenes.idAreaLabServicio}}</td>
-            <td>{{examenes.idMetodologia}}</td>
-            <td>{{examenes.idCategoriaExamenes}}</td>
-            <td>{{examenes.idTipoMuestra}}</td>
-            <td>{{examenes.idUnidadMedidas}}</td>
-            <td>{{examenes.idTipoResultado}}</td>
             <td>{{examenes.descripcion}}</td>
             <td>{{examenes.descripcionCorta}}</td>
             <td>{{examenes.lisCode}}</td>
-            <td>{{examenes.conteo}}</td>
             <td>{{examenes.confidencial}}</td>
             <td>{{examenes.calculado}}</td>
             <td>{{examenes.estado}}</td>

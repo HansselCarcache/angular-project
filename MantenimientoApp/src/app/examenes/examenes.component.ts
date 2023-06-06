@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Examenes } from './interface/examenes';
 import { ExamenesService } from './services/examenes.service';
 
-type Funciones = 'Buscar'|'Guardar'|'Editar'
+type Funciones = 'Buscar'|'Agregar'|'Editar'
 
 @Component({
     selector: 'app-examenes',
@@ -14,7 +14,7 @@ export class ExamenesComponent {
     select: any;
     public e?:Examenes;
     public examenes: Examenes[] = [];
-    public funciones: Funciones[] = ['Buscar', 'Guardar', 'Editar'];
+    public funciones: Funciones[] = ['Buscar', 'Agregar', 'Editar'];
     public selectedFuncion?: Funciones;
     constructor(private examenesService: ExamenesService){}
     ngOnInit(){

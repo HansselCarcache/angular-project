@@ -20,6 +20,6 @@
   </div>
 </div>
 <div >
-  <examenes-form *ngIf="selectedFuncion==='Guardar'"  (messageEvent)="addExamenes($event)"></examenes-form>
+  <examenes-form *ngIf="selectedFuncion==='Agregar'"  (messageEvent)="addExamenes($event)"></examenes-form>
   <examenes-form *ngIf="selectedFuncion==='Editar'" [examenesRecibida]="e" (updateEvent)="updateExamenes2($event)" ></examenes-form>
 </div>

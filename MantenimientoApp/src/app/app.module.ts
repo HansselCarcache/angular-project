@@ -10,7 +10,8 @@ import { PacienteComponent } from './paciente/paciente.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
     BrowserModule,

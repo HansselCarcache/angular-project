@@ -7,15 +7,17 @@
     <thead>
       <tr>
         <th>#</th>
-        <th>ID</th>
+        <!-- <th>ID</th> -->
         <th>Descripción</th>
         <th>Estado</th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let pais of paises; let i = index">
         <td>{{ i + 1 }}</td>
-        <td>{{pais.IdPais}}</td>
+        <!-- <td>{{pais.IdPais}}</td> -->
         <td>{{pais.descripcion}}</td>
             <td>{{pais.estado}}</td>
             <td><svg (click)="update(pais)" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">

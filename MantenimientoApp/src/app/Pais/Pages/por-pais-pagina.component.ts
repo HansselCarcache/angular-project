@@ -4,7 +4,7 @@ import { Pais } from '../../Pais/interface/pais';
 import { PaisService } from '../../Pais/services/pais.service';
 
 
-type Funciones = 'Buscar'|'Guardar'|'Listar'
+type Funciones = 'Buscar'|'Guardar'|'Editar'
 
 @Component({
   selector: 'pais-por-pais-pagina',
@@ -15,7 +15,7 @@ export class PorPaisPaginaComponent {
   select: any;
   public p?:Pais;
   public paises: Pais[] = [];
-  public funciones: Funciones[] = ['Buscar', 'Guardar', 'Listar'];
+  public funciones: Funciones[] = ['Buscar', 'Guardar', 'Editar'];
   public selectedFuncion?: Funciones;
   public selectedPais?: Pais;
 

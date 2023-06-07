@@ -1,5 +1,6 @@
 export interface Departamento {
-    IdDepartamento:Number,
-    IdPais:Number,
-    Descripcion:String
+    IdDepartamento:number;
+    IdPais:number;
+    Descripcion:String;
+    estado:number;
   }

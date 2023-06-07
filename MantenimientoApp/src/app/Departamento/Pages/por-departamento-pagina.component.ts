@@ -12,7 +12,8 @@ type Funciones = 'Buscar'|'Guardar'|'Listar'
   styles: []
 })
 export class PorDepartamentoPaginaComponent {
-
+  select: any;
+  public m?:Departamento;
   public departamentos: Departamento[] = [];
   public funciones: Funciones[] = ['Buscar', 'Guardar', 'Listar'];
   public selectedFuncion?: Funciones;

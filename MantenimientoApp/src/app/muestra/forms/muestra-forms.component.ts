@@ -33,7 +33,7 @@ export class MuestraFormComponent{
             this.muestras.estado = this.muestraRecibida.estado;
         }
     }
-     onSubmit() { 
+     onSubmit() {
         if (this.muestras.idTipoMuestra == undefined){
             // this.muestras.descripcion = this.descripcion;
             // this.muestras.estado = this.estado;
@@ -45,7 +45,7 @@ export class MuestraFormComponent{
             this.submitted = true;
             this.updateEvent.emit(this.muestras)
         }
-        
-       
+
+
      }
 }

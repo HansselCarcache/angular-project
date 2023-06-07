@@ -19,5 +19,5 @@
 </div>
 <div >
   <pais-form *ngIf="selectedFuncion==='Guardar'"  (messageEvent)="addPais($event)"></pais-form>
-  <!-- <pais-form *ngIf="selectedFuncion==='Editar'" [paisRecibido]="p" (updateEvent)="updatePais2($event)" ></pais-form> -->
+  <pais-form *ngIf="selectedFuncion==='Editar'" [paisRecibido]="p" (updateEvent)="updatePais2($event)" ></pais-form>
 </div>

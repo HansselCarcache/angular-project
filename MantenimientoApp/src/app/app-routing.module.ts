@@ -24,6 +24,26 @@ const routes: Routes= [
     path:'muestra',
     loadChildren: () => import('./muestra/muestra.module').then(m => m.MuestraModule)
   },
+  //    {
+  //   path: 'departamento',
+  //   loadChildren: () => import('./Departamento/departamento.module').then(m => m.DepartamentoModule)
+  //  },
+  {
+    path: 'departamentoV2',
+    loadChildren: () => import('./departamentoV2/departamentoV2.module').then(m => m.DepartamentoV2Module)
+  },
+  {
+    path: 'paciente',
+    loadChildren: () => import('./paciente/paciente.module').then(m => m.PacienteModule)
+  },
+  {
+    path: 'valores',
+    loadChildren: () => import('./valores/valores.module').then(m => m.ValoresModule)
+  },
+  {
+    path: 'examenes',
+    loadChildren: () => import('./examenes/examenes.module').then(m => m.ExamenesModule)
+  },
   {
     path:'departamento',
     loadChildren: () => import('./Departamento/departamento.module').then(m => m.DepartamentoModule)
